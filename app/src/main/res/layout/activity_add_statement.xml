@@ -1,0 +1,224 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.appracks.easy_wallet.operation.AddStatement">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <RadioGroup
+                android:id="@+id/rg_statementType"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#aeaeae"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_weight="1"
+                    android:id="@+id/rb_income"
+                    android:layout_width="wrap_content"
+                    android:text="Income"
+                    android:textColor="#fff"
+                    android:background="#018A00"
+                    android:checked="true"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:textSize="24dp"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:id="@+id/rb_expense"
+                    android:layout_width="wrap_content"
+                    android:text="Expense"
+                    android:textColor="#fff"
+                    android:background="#FF3300"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:textSize="24dp"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="#e8e8e8"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="9"
+                        android:textColor="#000"
+                        android:text="12-12-12"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_height="40dp" />
+                    <ImageButton
+                        android:id="@+id/btn_date_picker"
+                        android:layout_width="70dp"
+                        android:src="@drawable/ic_date_picker"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_inex_way"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_marginTop="5dp"
+                        android:text="Income source:"
+                        android:paddingLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_height="match_parent" />
+                    <Spinner
+                        android:id="@+id/spn_in_ex_cat"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/spinner_bac"
+                        android:layout_marginBottom="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_height="30dp">
+                    </Spinner>
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/et_description"
+                        android:layout_width="match_parent"
+                        android:textColor="#000"
+                        android:layout_height="wrap_content"
+                        android:hint="Description (optional)" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <requestFocus
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                        <EditText
+                            android:id="@+id/et_amount"
+                            android:layout_width="match_parent"
+                            android:inputType="numberDecimal"
+                            android:textColor="#000"
+                            android:layout_height="wrap_content"
+                            android:hint="Amount *" />
+                    <requestFocus />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btn_save"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="Save &amp; back"
+                        android:textColor="#000"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/btn_save_and_new"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="Save &amp; new"
+                        android:textColor="#000"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lay_add_cat"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="::: Add category :::"
+            android:textColor="#FFF"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/et_add_category"
+                android:hint="Category name"
+                android:textColorHint="#9b9b9b"
+                android:textColor="#fff"
+                android:background="#11402f"
+                android:padding="6dp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:layout_height="40dp" />
+            <Spinner
+                android:id="@+id/spn_cat_type"
+                android:layout_width="0dp"
+                android:popupBackground="#123e2c"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/spn_type_bac"
+                android:layout_weight="1"
+                android:layout_height="40dp"></Spinner>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:onClick="btn_add_cat_cancel"
+                android:textColor="#000"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Save"
+                android:onClick="btn_add_cat"
+                android:textColor="#000"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

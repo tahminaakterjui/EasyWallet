@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#11533e</color>
+    <color name="colorPrimaryDark">#11533e</color>
+    <color name="colorAccent">#536DFE</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="textColorSecondary">#dcdcdc</color>
+    <color name="textColorPrimary2">#000000</color>
+    <color name="textColorSecondary2">#010101</color>
+
+    <color name="list_item_title">#fff</color>
+    <color name="color_summery_item_pressed">#e9e7e7</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#357596</color>
+    <color name="list_divider">#272727</color>
+
+    <color name="c_r">#a21f14</color>
+    <color name="c_g">#058111</color>
+
+    <color name="color_summary_cat_normal">#16A085</color>
+    <color name="color_summary_cat_pressed">#10806c</color>
+
+    <color name="color_in_normal">#018A00</color>
+    <color name="color_in_pressed">#015600</color>
+    <color name="color_ex_normal">#FF3300</color>
+    <color name="color_ex_pressed">#ad2800</color>
+</resources>

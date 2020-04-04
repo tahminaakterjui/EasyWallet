@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ly_statement"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="0dp"
+            android:text="Date"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:singleLine="true"
+            android:background="@drawable/statement_back"
+            android:layout_weight="3"
+            android:textColor="#000"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_source_way"
+            android:layout_width="0dp"
+            android:text="Income Source"
+            android:background="@drawable/statement_back"
+            android:layout_weight="4"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="0dp"
+            android:text="Amount"
+            android:background="@drawable/statement_back"
+            android:layout_weight="3"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:gravity="right"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
